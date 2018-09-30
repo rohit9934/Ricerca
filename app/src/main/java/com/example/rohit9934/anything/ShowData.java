@@ -117,6 +117,8 @@ public class ShowData extends AppCompatActivity {
             webview.goBack();
         }
         else {
-            super.onBackPressed();
+           Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+            finish();
         }   }
 }
