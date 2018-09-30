@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bb"
+    tools:context="com.example.rohit9934.anything.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/toolbarTransparent"
+        android:layout_alignParentTop="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Enter a valid Twitter handle"
+    android:textSize="26sp"
+    android:textColor="#FFFFFF"
+    android:gravity="center"
+    android:fontFamily="sans-serif-light"
+    android:layout_marginTop="55dp"
+    android:layout_below="@+id/toolbar"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/apptitle" />
+
+<android.support.v7.widget.AppCompatEditText
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/handle"
+    android:background="@drawable/edit_text"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    android:hint="Twitter Handle"
+    android:gravity="center"
+    android:layout_marginTop="84dp"
+    android:layout_below="@+id/apptitle"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Enter"
+        android:background="@drawable/buttons"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/handle"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+</RelativeLayout>
