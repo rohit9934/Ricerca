@@ -2,9 +2,11 @@ package com.example.rohit9934.anything;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -56,43 +58,62 @@ public class ShowData extends AppCompatActivity {
         Picasso.with(this).load(st).into(img);*/
  //Show Recommendations;
         webview= (WebView) findViewById(R.id.webview);
-        Toast.makeText(this, "Recommending something...", Toast.LENGTH_SHORT).show();
+
         //t1.setClickable(true);
         //t1.setMovementMethod(LinkMovementMethod.getInstance());
-       // t1.setMovementMethod(LinkMovementMethod.getInstance());
+        // t1.setMovementMethod(LinkMovementMethod.getInstance());
         s1= getIntent().getExtras().getString("username");
         /*t1.setText(s1);*/
         JSONObject json = new JSONObject();
-       // String n="narendramodi";
         try {
             json.put("userhandle",s1);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        String url = "https://gentle-bayou-76173.herokuapp.com/";
+        //String url="https://gentle-bayou-76173.herokuapp.com";
+        String url = "https://ricerca.eu-gb.mybluemix.net/";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, json,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        //String s= response.toString();
+
                         //The below 3 lines is to fetch mood type from jsonobject.
                         Iterator<String> keys= response.keys();
-                        String s= keys.next();
-                        String value = response.optString(s);
+                        final String s= keys.next();
+                        final String value = response.optString(s);
                         if(value.equals("Not valid")){
                             Toast.makeText(ShowData.this, "Please Enter valid Username", Toast.LENGTH_SHORT).show();
                            // finish();
                             startActivity(new Intent(getApplicationContext(),MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                         }
-                    //   Toast.makeText(ShowData.this,value, Toast.LENGTH_SHORT).show();
-                     // t1.setText(value);
-                        webview.setWebViewClient(new WebViewClient());
-                        webview.loadUrl(value);
-                        WebSettings web= webview.getSettings();
-                        web.setJavaScriptEnabled(true);
-                        //String text = "<a href='"+value+"'> Google </a>";
+                        else {
+                        //    Toast.makeText(ShowData.this,s, Toast.LENGTH_SHORT).show();
+                            AlertDialog.Builder builder= new AlertDialog.Builder(ShowData.this);
+                            builder.setTitle("Successfully analyzed: "+(s.toUpperCase()));
+                            builder.setMessage("would you like to have some recommendation based on the sentiment ?");
+                            builder.setPositiveButton("Yes, Recommend Me", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    webview.setWebViewClient(new WebViewClient());
+                                    // Toast.makeText(ShowData.this, s, Toast.LENGTH_SHORT).show();
+                                    webview.loadUrl(value);
+                                    WebSettings web = webview.getSettings();
+                                    web.setJavaScriptEnabled(true);
+                                }
+                            });
+                            builder.setNegativeButton("No, Go back", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent i = new Intent(ShowData.this, MainActivity.class);
+                                    startActivity(i);
+                                    finish();
+                                }
+                            });
+                            AlertDialog alertDialog= builder.create();
+                            alertDialog.show();
 
+                            //String text = "<a href='"+value+"'> Google </a>";
+                        }
                        //String text = "<a href='www.link.com'>Click here</a>";
 
                        // textView.setText(Html.fromHtml(text));
@@ -117,7 +138,7 @@ public class ShowData extends AppCompatActivity {
             webview.goBack();
         }
         else {
-           Intent i = new Intent(this, MainActivity.class);
+            Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
             finish();
         }   }
