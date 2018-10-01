@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import static android.R.attr.name;
 
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         int id= item.getItemId();
         if(id==android.R.id.home){
             finish();
+        }
+        if(id==R.id.help){
+            Toast.makeText(this, "Enter a username and we will recommend you something.", Toast.LENGTH_SHORT).show();
         }
         return true;
     }
@@ -41,10 +45,12 @@ public class MainActivity extends AppCompatActivity {
         b1= (Button) findViewById(R.id.enter);
         e1= (EditText) findViewById(R.id.handle);
         b1.setOnClickListener(new View.OnClickListener(){
+
+
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,ShowData.class);
-                s=e1.getText().toString();
+                String s=e1.getText().toString();
                 i.putExtra("username",s);
                 startActivity(i);
                 finish();
