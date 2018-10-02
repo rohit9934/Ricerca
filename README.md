@@ -1,4 +1,60 @@
 # Recerca
-An Android Project which can parse user recent tweets and then analyze his mood based on the tweets and recommend him something based on the
-mood, Android GUI and java code is written by me and Backend Server code is written by https://github.com/vivek-singh-rathore in Python flask.
-To understand the code and it's working. Kindly contact Vivek.
+# Project Title
+
+An Android app which will take the user twitter handle from input and recommend them something based on the Sentiments we received from
+the analysis of the tweets that can be joy, anger, sadness and more.
+
+## Getting Started
+
+To run, just import the project from VCS in android studio
+
+### Prerequisites
+
+Here is the app link : https://drive.google.com/open?id=1dX47271mP0Ze6Fd5bwkIMt80RcXE_ams
+To run, you will need android 6.0 or more.
+
+### Installing
+
+Download the app from link and then click on install anyway option
+
+And repeat
+
+Enter the user twitter handle and then click on Enter button to get results.
+
+## Running the tests
+
+For Example
+Enter the handle: narendramodi
+
+## Deployment
+
+You can deploy it using android studio
+
+## Built With
+
+* [Python 3.6](https://www.python.org/downloads/) - The backend programming language
+* [Flask](http://flask.pocoo.org/) - Web framework used
+* [Json](https://developer.android.com/reference/org/json/JSONObject) - Used to parse the data from server 
+* [Materials design](terial.google.com) - for android studio
+
+## Contributing
+
+Please read discription(https://github.com/rohit9934/Ricerca/blob/master/MITLicense) for details on our code of conduct.
+For getting a pull request for backend python code contact, https://github.com/vivek-singh-rathore else contact me.
+
+
+## Authors
+
+* **Rohit Sharma** - *Java code, Front end Maintanence* - [Rohit9934](https://github.com/rohit9934)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+This project was created for IBM hackathon and is under maintaince till forever.
+I want to dedicate this project to my favourite character, Heisenberg(Breaking bad) and Tyler Durden(Fight club).
+Thanks to vivek, akhil and parush for showing motivation at right time.
