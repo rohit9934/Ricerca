@@ -47,7 +47,7 @@ For getting a pull request for backend python code contact my friend or willing 
 
 * **Rohit Sharma** - *Java code, Front end Maintanence* - [Rohit](https://github.com/rohit9934)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/rohit9934/Ricerca/contributors) who participated in this project.
 
 ## License
 
