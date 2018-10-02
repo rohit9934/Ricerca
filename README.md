@@ -56,6 +56,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 This project was created for IBM hackathon and is under maintainence till forever.
+
 Thanks to vivek, akhil and parush for showing motivation at right time.
+
 I want to dedicate this project to my favourite character, Heisenberg(Breaking bad) and Tyler Durden(Fight club).
 
