@@ -1,4 +1,4 @@
-# Recerca
+# Ricerca
 # Project Title
 
 An Android app which will take the user twitter handle from input and recommend them something based on the Sentiments we received from
