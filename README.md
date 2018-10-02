@@ -10,7 +10,7 @@ To run, just import the project from VCS in android studio
 
 ### Prerequisites
 
-Here is the app link : https://drive.google.com/open?id=1dX47271mP0Ze6Fd5bwkIMt80RcXE_ams
+Here is the app link : [Ricerca](https://drive.google.com/open?id=1dX47271mP0Ze6Fd5bwkIMt80RcXE_ams)
 To run, you will need android 6.0 or more.
 
 ### Installing
@@ -40,12 +40,12 @@ You can deploy it using android studio
 ## Contributing
 
 Please read discription(https://github.com/rohit9934/Ricerca/blob/master/MITLicense) for details on our code of conduct.
-For getting a pull request for backend python code contact, [My Friend Vivek](https://github.com/vivek-singh-rathore) else contact me.
+For getting a pull request for backend python code contact my friend or willing to contribute something, [Vivek Singh Rathore](https://github.com/vivek-singh-rathore) else if you want to contribute to android studio code, contact me.
 
 
 ## Authors
 
-* **Rohit Sharma** - *Java code, Front end Maintanence* - [Rohit9934](https://github.com/rohit9934)
+* **Rohit Sharma** - *Java code, Front end Maintanence* - [Rohit](https://github.com/rohit9934)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -55,6 +55,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-This project was created for IBM hackathon and is under maintaince till forever.
-I want to dedicate this project to my favourite character, Heisenberg(Breaking bad) and Tyler Durden(Fight club).
+This project was created for IBM hackathon and is under maintainence till forever.
 Thanks to vivek, akhil and parush for showing motivation at right time.
+I want to dedicate this project to my favourite character, Heisenberg(Breaking bad) and Tyler Durden(Fight club).
+
