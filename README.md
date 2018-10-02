@@ -40,7 +40,7 @@ You can deploy it using android studio
 ## Contributing
 
 Please read discription(https://github.com/rohit9934/Ricerca/blob/master/MITLicense) for details on our code of conduct.
-For getting a pull request for backend python code contact, https://github.com/vivek-singh-rathore else contact me.
+For getting a pull request for backend python code contact, [My Friend Vivek](https://github.com/vivek-singh-rathore) else contact me.
 
 
 ## Authors
