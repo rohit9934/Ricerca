@@ -1,53 +1,76 @@
-# Ricerca
-# Project Title
+# Tech Army
+## Ricerca  
 
-An Android app which will take the user twitter handle from input and recommend them something based on the Sentiments we received from
+![Logo](/logo.png "Title")  
+
+An Android app which will take the user twitter handle as input and recommend them something based on the sentiments received from
 the analysis of the tweets that can be joy, anger, sadness and more.
 
-## Getting Started
+## Working demo 
 
-To run, just import the project from VCS in android studio
+Here is the app download link [Ricerca](https://drive.google.com/open?id=1dX47271mP0Ze6Fd5bwkIMt80RcXE_ams). To run, you will need android 6.0 or more.  
 
-### Prerequisites
+Here is video [link](https://youtu.be/Nmaqvk_t7TQ) of working app.  
 
-Here is the app link : [Ricerca](https://drive.google.com/open?id=1dX47271mP0Ze6Fd5bwkIMt80RcXE_ams)
-To run, you will need android 6.0 or more.
 
-### Installing
+## Code  
 
-Download the app from link and then click on install anyway option
+The *code* directory contains all the required code. It is divided into android and python.  
 
-And repeat
+### Android code  
 
-Enter the user twitter handle and then click on Enter button to get results.
+Just import the code into android studio, build and run.  
 
-## Running the tests
+### Python code    
 
-For Example
-Enter the handle: narendramodi
+*For commands to work you must be in the python code directory.*  
+
+**Prerequisites for python code**  
+
+[Python 3.5](https://www.python.org/downloads/) is required. To install other dependencies run:  
+
+    pip install -r requirements.txt 
+
+**Running Flask server locally**  
+
+In python code directory run:  
+
+    python tone_test_ver3.py
+
+This will start flask local server for the python code.
+
+**Running tests on server**    
+
+Just run :  
+
+    pip install requests
+    python server_test.py
+
+This script will make a Http post request to our local flask server. If everything went fine you'll  see the json response printed to the terminal.
+
 
 ## Deployment
 
-You can deploy it using android studio
+The python code is deployed using the IBM CloudFoundry platform, for more details [look](https://www.ibm.com/cloud/cloud-foundry) here.
 
 ## Built With
 
-* [Python 3.6](https://www.python.org/downloads/) - The backend programming language
+* [IBM Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/) - For sentiment analysis
+* [Tweepy](http://www.tweepy.org/) - All the tweet work
+* [IBM Cloud Foundry](https://www.ibm.com/cloud/cloud-foundry) - Deployment
+* [Python 3.5](https://www.python.org/downloads/) - The backend programming language
 * [Flask](http://flask.pocoo.org/) - Web framework used
 * [Json](https://developer.android.com/reference/org/json/JSONObject) - Used to parse the data from server 
 * [Materials design](terial.google.com) - for android studio
 
-## Contributing
-
-Please read description [License](https://github.com/rohit9934/Ricerca/blob/master/MITLicense) for details on our code of conduct.
-For getting a pull request for backend python code contact my friend or willing to contribute something, [Vivek Singh Rathore](https://github.com/vivek-singh-rathore) else if you want to contribute to android studio code, contact me.
-
 
 ## Authors
-
-* **Rohit Sharma** - *Java code, Front end Maintanence* - [Rohit](https://github.com/rohit9934)
-
-See also the list of [contributors](https://github.com/rohit9934/Ricerca/contributors) who participated in this project.
+### Tech Army  
+Here is the list of team members and their roles:
+* **Rohit Sharma** -   Java code, Front end 
+* **Akhil Chandail** -   Java code, Front end
+* **Parush Gupta** -     Python code, Back end 
+* **Vivek Singh Rahtore** -   Python code, Back end 
 
 ## License
 
@@ -55,8 +78,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-This project was created for IBM hackathon and is under maintainence till forever.
-
-Thanks to vivek, akhil and parush for showing motivation at right time.
-
+This project was created for IBM HackChallenge 2018.
 
