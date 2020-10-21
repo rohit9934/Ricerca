@@ -59,5 +59,4 @@ This project was created for IBM hackathon and is under maintainence till foreve
 
 Thanks to vivek, akhil and parush for showing motivation at right time.
 
-I want to dedicate this project to my favourite character, Heisenberg(Breaking bad) and Tyler Durden(Fight club).
 
